@@ -69,7 +69,7 @@ vendas_df = pd.concat([vendas_df, vendas_dez_df], ignore_index=True) # Lembre-se
 print(vendas_df)
 
 # Método de excluir linhas e colunas:
-vendas_df = vendas_df.drop('Imposto', axis=1) # 0 é o eixo da linha e 1 o eixo da coluna
+vendas_df = vendas_df.drop('Imposto', axis=1) # 0 é o eixo da linha e 1 o eixo da coluna. Se eu não informar o eixo, automaticamente o pandas vai tentar excluir uma linha. O parâmetro axis=1 no método drop() do Pandas é utilizado para especificar que a operação deve ser realizada nas colunas e não nas linhas do DataFrame.
 print(vendas_df)
 vendas_df = vendas_df.drop(0, axis = 0) # excluí a linha 0
 print(vendas_df)
